@@ -23,12 +23,13 @@ const APIError = require('./errors/apierror');
  *   - `clientID`      your Zoho CRM application's Client ID
  *   - `clientSecret`  your Zoho CRM application's Client Secret
  *   - `redirect_URL`   URL to which Zoho CRM will redirect the user after granting authorization
- *   - `scope`         array of permission scopes to request.  valid scopes for the modules API include:
- *                     'ZohoCRM.modules.ALL', 'ZohoCRM.modules.read', 'ZohoCRM.modules.Leads', 'ZohoCRM.modules.salesorders', or none.
+ *   - `scope`         array of permission scopes to request.
+ *                     valid scopes for the modules API:
  *                     (see https://www.zoho.com/crm/help/api/v2/#Modules-APIs for more info)
  *   — `response_type` Specify response_type as "code"
  *                     (see http://developer.github.com/v3/#user-agent-required for more info)
- *   - `access_type`   Specify access_type as online or offline. If you want to generate the refresh token,
+ *   - `access_type`   Specify access_type as online or offline.
+ *                     If you want to generate the refresh token,
  *                     please set the value as "offline"
  *
  *
@@ -149,7 +150,7 @@ Strategy.prototype.userProfile = function (accessToken, done) {
     profile.provider = 'zoho';
     profile._raw = body;
     profile._json = json;
-    done(null, profile);
+    return done(null, profile);
   });
 };
 
