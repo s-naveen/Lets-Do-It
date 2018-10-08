@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import './app.css';
-import ReactImage from './react.png';
-
+// eslint-disable-next-line react/prefer-stateless-function
 export default class App extends Component {
-  state = { username: null };
-
   render() {
     return (
       <div>

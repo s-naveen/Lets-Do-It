@@ -21,9 +21,9 @@
     "mongoose-long": "^0.2.1",
     "passport": "^0.4.0",
     "passport-oauth2-refresh": "^1.1.0",
-    "passport-zoho-crm": "https://github.com/s-naveen/passport-zoho-crm.git",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "passport-oauth2": "1.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
