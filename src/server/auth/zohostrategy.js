@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const ZohoStrategy = require('../auth/strategies/zohostrategy/strategy.js');
-const { clientID, clientSecret } = require('../config/var').oauth;
+const { clientID, clientSecret, callbackURL } = require('../config/var').oauth;
 
 const User = mongoose.model('User');
 const zohoStrategy = new ZohoStrategy(
@@ -9,7 +9,7 @@ const zohoStrategy = new ZohoStrategy(
     clientSecret,
     scope:
       'AaaServer.profile.Read Desk.tickets.READ Desk.contacts.READ Desk.tasks.READ Desk.basic.READ Desk.settings.READ Desk.events.READ',
-    callbackURL: 'https://naveen-s-portfolio.herokuapp.com/auth/zoho/callback',
+    callbackURL,
     response_type: 'code',
     access_type: 'offline',
     grant_type: 'authorization_code',
