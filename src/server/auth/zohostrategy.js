@@ -9,7 +9,7 @@ const zohoStrategy = new ZohoStrategy(
     clientSecret,
     scope:
       'AaaServer.profile.Read Desk.tickets.READ Desk.contacts.READ Desk.tasks.READ Desk.basic.READ Desk.settings.READ Desk.events.READ',
-    callbackURL: 'http://localhost:8080/auth/zoho/callback',
+    callbackURL: 'https://naveen-s-portfolio.herokuapp.com/auth/zoho/callback',
     response_type: 'code',
     access_type: 'offline',
     grant_type: 'authorization_code',
